@@ -1,0 +1,185 @@
+#index-gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 10px;
+	/*grid area have 4 perameters n it uses to positioning the columns and rows content*/
+	grid-template-areas: 
+	"gallery-p gallery-p gallery-p gallery-p"
+	"gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+	"img1 img2 img3 img4"
+	"img5 img6 img3 img7"
+	"form rem rem rem"
+	"res res res res";
+}
+
+#index-gallery .gallery-image {
+	width: 100%;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	cursor: pointer;
+}
+/*Images*/
+#index-gallery p {
+    grid-area: gallery-p;
+    padding-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+	font-weight: 550;
+	font-size: 18px;
+
+    	}
+#index-gallery h2 {
+	grid-area: gallery-h2;
+	padding: 10px;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bolder;
+	font-size: 32px;
+
+}
+#index-gallery #form {
+	margin-top: 10px;
+	grid-area: form;
+	display: flex;
+	height: 30px;
+	width: 260px;
+	font-family: 'Times New Roman', Times, serif
+}
+#index-gallery .remove {
+	grid-area: rem;
+	width: 200px;
+	height: 38px;
+	margin-top: 10px;
+	margin-left: 110px;
+	display: flex;
+	font-family: 'Times New Roman', Times, serif;
+}
+#index-gallery #result {
+	grid-area: res;	
+	display: flex;
+	border-radius: 10px;
+	background-size: cover;
+	width: 400px;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:cover ;
+	cursor: pointer;
+}
+#index-gallery .img1 {
+	grid-area: img1;
+	background-image: url("../img/thumbs/img1.jpg");
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#index-gallery .img2 {
+	grid-area: img2;
+	background-image: url("../img/thumbs/img2.jpg");
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#index-gallery .img3 {
+	grid-area: img3;
+	background-image: url("../img/thumbs/img3.jpg");
+	height: 610px;/*300px for each grid thats why 600px for 2 grid to combine and 10px added for grid gap*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+#index-gallery .img4 {
+	grid-area: img4;
+	background-image: url("../img/thumbs/img4.jpg");
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+#index-gallery .img5 {
+	grid-area: img5;
+	background-image: url("../img/thumbs/img5.jpg");
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+#index-gallery .img6 {
+	grid-area: img6;
+	background-image: url("../img/thumbs/img6.jpg");
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#index-gallery .img7 {
+	grid-area: img7;
+	background-image: url("../img/thumbs/img7.jpg");
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.gallery-image div {
+	width: 100%;
+	height: 100%;
+	background-color: #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+
+}
+.gallery-image a {
+	font-family: Times-New-Roman;
+	font-size: 16px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.gallery-image div:hover {
+	opacity: .7;
+	transition: all ease-in-out 300ms;
+}
+
+/*popup window*/
+.img-window {
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.8);
+	position:fixed;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100; 
+}
+.img-window img {
+	max-height: 80vh;
+	max-width: 80vw;
+
+}
+
+/*next button*/
+.img-btn-next {
+	display: block;
+	padding: 6px 10px ;
+	border-radius: 4px;
+	background-color: #111;
+	color: #fff;
+	position: fixed;
+	top: 48vh;
+	z-index: 500;
+	font-family: Times-New-Roman;
+	text-transform: uppercase;
+	cursor: pointer;
+
+}
+
+.img-btn-next:hover {
+	opacity: .8;
+}
+/*prev button*/
+.img-btn-prev {
+	display: block;
+	padding: 6px 10px;
+	border-radius: 4px;
+	background-color: #111;
+	color: #fff;
+	position: fixed;
+	top: 48vh;
+	z-index: 500;
+	font-family: Times-New-Roman;
+	text-transform: uppercase;
+	cursor: pointer;
+
+}
+
+.img-btn-prev:hover {
+	opacity: .8;
+}

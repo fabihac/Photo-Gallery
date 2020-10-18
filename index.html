@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
+	<link rel="icon"  href="favicon.png">
+	<title>JS GALLERY</title>
+</head>
+<body>
+	<header id="header-main">
+		<nav class="wrapper-main nav-main">
+		<ul>
+			<li><a href="#">My Work</a></li>
+			<li><a href="#">About Me</a></li>
+			<li><a href="#">Contact Me</a></li>
+			<li><a href="#">Instagram</a></li>
+		</ul>
+	</nav>
+		
+	</header>
+
+	<section id="index-gallery" class="container">
+		<p>Fabiha Marzan Chowdhury</p>
+		<h2>My Photo Gallery</h2>
+		
+		<form id="form" enctype="multipart/form-data" action="post">
+			<div class="form-group input-group col-xs-4">
+				<input type="file" id="image" class="image-control">
+			</div>
+			<div class="form-group"> 
+				<button class="btn btn-primary" style="margin-left: 50px;">Upload</button>
+			</div>
+		</form>
+		
+		<div class="remove">
+			<button onclick="remove()" class="btn btn-danger">Remove</button>
+		</div>
+	   
+		<div id="result"></div>
+		
+		<br>
+		<div class="gallery-image img1">
+			<div><a href="#">This is a title</a></div>
+		</div>
+		<div class="gallery-image img2">
+			<div><a href="#">This is a title</a></div>
+		</div>
+		<div class="gallery-image img3">
+			<div><a href="#">This is a title</a></div>
+		</div>
+		<div class="gallery-image img4">
+			<div><a href="#">This is a title</a></div>
+		</div>
+		<div class="gallery-image img5">
+			<div><a href="#">This is a title</a></div>
+		</div>
+		<div class="gallery-image img6">
+			<div><a href="#">This is a title</a></div>
+		</div>
+		<div class="gallery-image img7">
+			<div><a href="#">This is a title</a></div>
+		</div>
+
+	</section>
+	<script type="text/javascript" src="js/gallery.js"></script> <!--need to load the js right after the image loaded -->
+	<script src="js/script.js"></script>
+
+</body>
+</html>
